@@ -47,7 +47,7 @@ const Nav = () => {
           <div className={`lg:flex lg:flex-col lg:gap-8 lg:items-center transition-all ${isMenuOpen ? 'flex flex-col items-center mt-8' : 'hidden'}`}>
             <ul className='lg:flex lg:gap-2 lg:gap-8'>
               <li>
-                <Link href="/projects"> Projects </Link>
+                <Link href="#projects"> Projects </Link>
               </li>
               <li>
                 <Link href="#about"> About </Link>
