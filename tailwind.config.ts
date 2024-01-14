@@ -78,10 +78,17 @@ const config = {
 
       backgroundImage: {
         "dashboard-bg": "url('public/dashboard.jpg')",
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: '200ch', // add required value here
+          }
+        }
       }
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config
 
 export default config

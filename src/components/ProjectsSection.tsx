@@ -5,6 +5,7 @@ import { Section } from './Section'
 async function fetchProjects() {
   const query = `
   *[_type == 'projects'] | order(_createdAt desc){
+    _id,
     title,
     smallDescription,
     "currentSlug": slug.current,
@@ -18,7 +19,7 @@ async function fetchProjects() {
 }
 
 interface IProjects {
-  id: string
+  _id: string
   title: string
   smallDescription: string
   url?: string
@@ -37,13 +38,14 @@ const ProjectsSection = async () => {
         <div className="mt-8 flex-col lg:flex lg:flex-row gap-8">
           {Projects.map((project, index) => (
             <Project
-              key={project.id}
+              key={project._id}
               name={project.title}
               description={project.smallDescription}
               url={project.url || ''}
               github={project.github || ''}
               titleImage={project.titleImage || ''}
               className="max-w-50 h-fit"
+              id={project._id}
             />
           ))}
         </div>

@@ -8,7 +8,7 @@ const AboutMeSection = () => {
       <div className="py-24 w-full xl:w-2/3 rounded-md px-10">
         <h1 className="text-4xl text-center font-semibold mt-4">About me</h1>
         <div className="flex-col gap-4 w-full mt-8">
-          <div className="flex justify-around">
+          <div className="flex justify-around overflow-hidden">
             <Image src="/me/me_alone.jpeg" alt="me" width={300} height={300} className="rounded" style={{ objectFit: 'cover' }} />
             <Image src="/me/me_laura.jpeg" alt="me" width={300} height={300} className="rounded" style={{ objectFit: 'cover' }} />
             <Image src="/me/me_handsome.jpeg" alt="me" width={300} height={300} className="rounded" style={{ objectFit: 'cover' }} />

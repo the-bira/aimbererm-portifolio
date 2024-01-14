@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react'
 import { urlFor } from '@/lib/sanity'
 
 interface ProjectProps {
+  id: string
   name: string
   description: string
   url: string
@@ -14,6 +15,7 @@ interface ProjectProps {
 }
 
 const Project = ({
+  id,
   name,
   description,
   url,
@@ -31,7 +33,7 @@ const Project = ({
       <CardContent className='mt-4'>
         <CardTitle>{name}</CardTitle>
         <CardDescription className='mt-2'>{description}</CardDescription>
-        <Link href={github} target='_blank' className='text-sm text-slate-500 flex items-center hover:text-slate-50 transition-all'>read more <ArrowRight className='ml-2 w-4 self-center' /> </Link>
+        <Link href={`/projects/${id}`} className='text-sm text-slate-500 flex items-center hover:text-slate-50 transition-all'>read more <ArrowRight className='ml-2 w-4 self-center' /> </Link>
       </CardContent>
     </Card>
 
