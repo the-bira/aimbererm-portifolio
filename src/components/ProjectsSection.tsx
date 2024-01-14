@@ -32,7 +32,7 @@ const ProjectsSection = async () => {
   const Projects: IProjects[] = await fetchProjects()
 
   return (
-    <Section className='justify-center mt-1 h-full'>
+    <Section className='justify-center mt-1 h-full' id='projects'>
       <div className="py-24 w-full xl:w-2/3 rounded-md px-10">
         <h1 className="text-4xl text-center font-semibold mt-4">Cases</h1>
         <div className="mt-8 flex-col lg:flex lg:flex-row gap-8">
